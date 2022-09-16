@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap'); 
+*{
+    padding:0;
+    margin:0;
+    
+}
+.logo{
+    color: black;
+}
+body{
+    line-height: 1.8;
+}   
+.navbar-nav{
+    margin-inline-start: auto;
+   
+}
+.navbar-nav a:hover{
+    color:darkgoldenrod;
+}
+h1,h2{
+    font-weight: 900;  
+}
+
+a{
+    text-decoration: none;
+    font-weight: 800;
+    transition: all 0.4s ease;
+}
+.navbar{
+    box-shadow: 0 12px 20px rgba(0,0, 0, 0.1);
+}
+footer{
+    
+    color: black;
+    height: 5em;
+    background-color:rgb(241, 234, 234);
+    margin:0;
+    text-align: center;
+   }
+   .places{
+    margin-top: 70px;
+   }
+   .row div{
+    height: 300px;
+    margin-left: 0;
+    padding:0;
+   }
+   .location{
+    margin-top:30px;
+    margin-bottom: 0;
+    padding:0;
+    
+   }
+.carousel-inner{
+    margin-right: 15px;
+}
+  
+  

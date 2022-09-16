@@ -1,0 +1,74 @@
+*{
+    padding:0;
+    margin:0;
+    
+}
+.logo{
+    color: black;
+}
+body{
+    line-height: 1.8;
+}   
+.navbar-nav{
+    margin-inline-start: auto;
+   
+}
+.navbar-nav a:hover{
+    color:darkgoldenrod;
+}
+h1,h2{
+    font-weight: 900;  
+}
+
+a{
+    text-decoration: none;
+    font-weight: 800;
+    transition: all 0.4s ease;
+}
+.navbar{
+    box-shadow: 0 12px 20px rgba(0,0, 0, 0.1);
+}
+.login{
+
+    margin-top: 10%;
+    margin-left: 35%;
+    margin-right:33%;
+    border: 2px solid black;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    
+}
+.form-group .btn{
+    background-color:white;
+    text-align: center;
+    color: black;
+    border: 1px solid black;
+}
+
+form{
+    
+    padding-right: 5px;
+    padding-left: 5px;
+
+}
+.form-check{
+    text-align: left;
+}
+footer{
+    
+    color: black;
+    height: 5em;
+    background-color:rgb(241, 234, 234);
+    margin-top:130px;
+    margin-bottom: 0;
+    text-align: center;
+   }
+   .form-group button{
+    background-color: black;
+   }
+
+   .form-group button:hover{
+    background-color: black;
+   }
