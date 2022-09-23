@@ -69,8 +69,6 @@
                   Destination
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item" href="index.html">explore more</a></li>
-            
                 </ul>
               </li>
             </ul>
@@ -92,11 +90,15 @@
           </div>
             <div class="form-group row">
                 <div class="col-sm-6  p-2">
-                    <input type="email" class="form-control" id="firstname" placeholder="Email" required>
-                   </div>
-                  <div class="col-sm-6  p-2">
-                    <input type="number" class="form-control" id="LastName" placeholder="Phone Number" required>
+                    <input type="email" class="form-control" id="email" placeholder="Email" onkeyup="validate()">
+                  <span id="error"></span>
                   </div>
+  
+                  <div class="col-sm-6  p-2">
+                    <input type="text" class="form-control" id="phone" placeholder="Phone Number">
+                  </div>
+                  <span class="col-sm-6"></span>
+                  <span id="phonemessage" class="col-sm-6"></span>
             </div>
             <div class="form-group row">
                 <div class="col-sm-3  p-2">
@@ -123,12 +125,17 @@
               </div>
               
             <div class="form-group row">
-                <div class="col-sm-6  p-2">
-                    <input type="password" class="form-control" id="firstname" placeholder="Password" required>
-                   </div>
-                  <div class="col-sm-6  p-2">
-                    <input type="password" class="form-control" id="LastName" placeholder="Confirm Password" required>
+                <div class=" col-sm-6  p-2">
+                    <input type="text" class="form-control" id="password" placeholder="Password" name="psw" 
+                    pattern="(?.*\d)(?=.*[a-z])(?=.*[A-Z]).{8}" title="Must contain one number and one Uppercase and 
+                    Lowercase letter and at least 8 or more characters" required>
                   </div>
+                  <div class="col-sm-6  p-2">
+                    <input type="password" class="form-control" id="confirmpassword" placeholder="Confirm Password">
+                 <span id="confirmmessage"></span>
+                  </div>
+                  <span id="messages" class="col-sm-6"></span>
+                  <span id="confirmmessage" class="col-sm-6" ></span>
               </div>
               <div class="form-group row ">
               <div class="col-sm-4  p-2">
@@ -185,5 +192,6 @@
         <p>Email: keralatourism@org Phone:+91 471 2345432</p>
         <p>All rights reserved @ Kerala Tourism 2022.</p>
        </footer> 
+       <script src="signup.js"></script>
 </body>
 </html>

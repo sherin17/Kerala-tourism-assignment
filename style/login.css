@@ -61,7 +61,7 @@ footer{
     color: black;
     height: 5em;
     background-color:rgb(241, 234, 234);
-    margin-top:130px;
+    margin-top:170px;
     margin-bottom: 0;
     text-align: center;
    }
@@ -72,3 +72,31 @@ footer{
    .form-group button:hover{
     background-color: black;
    }
+
+   /* The message box is shown when the user clicks on the password field */
+  #message {
+    display:none;
+    background: #f1f1f1;
+    color: #000;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+    display: none;
+  }
+  
+  #message li{
+    padding: 10px 25px;
+    text-align: left;
+  }
+  
+  /* Add a green text color */
+  .valid {
+    color: green;
+  }
+  
+ 
+  
+  /* Add a red text color  */
+  .invalid {
+    color: red;
+  }
