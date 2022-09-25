@@ -26,39 +26,29 @@ email.onblur = function(){
 //password validation
 var myInput = document.getElementById("password");
 var messages = document.getElementById("messages");
+var passexp =/^(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$/
+function passwordvalidates(){
 
-// When the user clicks on the password field, show the message box
-myInput.onfocus = function() {
-  document.getElementById("message").style.display = "block";
-}
-
-// When the user clicks outside of the password field, hide the message box
-myInput.onblur = function() {
-  document.getElementById("message").style.display = "none";
-}
-
-// When the user starts to type something inside the password field
-myInput.onkeyup = function() {
-//strength
-  var weak = /[A-Z]/g;
-  var medium = /[A-Z][a-z]/g;
-  if(myInput.value.match("")){
-    messages.innerHTML = "Enter Password";
+  if(passexp.test(myInput.value)){
+    messages.innerHTML = "Password strength is Strong";
+    messages.style.color = "green";
+    myInput.style.borderColor ="green";
+    return true;
   }
-  if(myInput.value.match(weak)){
-    messages.innerHTML = "Password is to weak";
-    messages.style.color = "red";
-    
-  }
-  if(myInput.value.match(medium)){
+  else if(myInput.value.length >4 && (myInput.value.length <8)){
     messages.innerHTML = "Password strength is medium";
-    messages.style.color = "orange"; 
+    messages.style.color = "orange";
+    myInput.style.borderColor ="orange";
   }
-  if(myInput.value.length >= 8){
-    messages.innerHTML = "Password is strong";
-    messages.style.color = "green"; 
-  } 
+  else{
+  messages.innerHTML = "Password Strength is weak";
+  messages.style.color = "red";
+  myInput.style.borderColor ="red";
+    return false;
+  }
+  
 }
+
 myInput.onfocus = function(){
   document.getElementById("messages").style.display = "block";
 }
@@ -66,11 +56,13 @@ myInput.onblur = function(){
   document.getElementById("messages").style.display = "none";
 }
 
+
+
 //confirm password
 var confirmmessage = document.getElementById("confirmmessage");
 var confirmpassword = document.getElementById("confirmpassword");
 
-confirmpassword.onkeyup = function() {
+ function confirmpasswords() {
   if(confirmpassword.value!=myInput.value){
     confirmmessage.innerHTML = "Passwords not matched";
     confirmmessage.style.color = "red";
@@ -89,19 +81,19 @@ confirmpassword.onblur = function(){
 
 //Phone number validation
 
-var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+var phoneno = /\b\d{3}[-. ]?\d{3}[-. ]?\d{4}\b/g
 var phonemessage = document.getElementById("phonemessage");
 var phone = document.getElementById("phone");
 
-phone.onkeyup = function validates(){
+function numbervalidates(){
 
   if(phoneno.test(phone.value)){
-    phonemessage.innerHTML = "Valid Phone Number";
+    phonemessage.innerHTML = "Valid Number";
     phonemessage.style.color = "green";
     return true;
   }
   else{
-  phonemessage.innerHTML = "Invalid Phone number";
+  phonemessage.innerHTML = "Invalid number";
   phonemessage.style.color = "red";
     return false;
   }
