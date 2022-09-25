@@ -73,4 +73,34 @@ footer{
     background-color: black;
    }
 
+<<<<<<< HEAD
    
+=======
+   /* The message box is shown when the user clicks on the password field */
+  #message {
+    display:none;
+    background: #f1f1f1;
+    color: #000;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+    display: none;
+  }
+  
+  #message li{
+    padding: 10px 25px;
+    text-align: left;
+  }
+  
+  /* Add a green text color */
+  .valid {
+    color: green;
+  }
+  
+ 
+  
+  /* Add a red text color  */
+  .invalid {
+    color: red;
+  }
+>>>>>>> 657a225a8c2297430aa2bd7c63b3c91fe982ff94
